@@ -1,6 +1,6 @@
 public class PriceManagement {
 
-    public double netPrice(Product product) {
+    public double calculateNetPrice(Product product) {
         double netPrice;
         switch (product.getCategory()) {
             case "owoce i warzywa":

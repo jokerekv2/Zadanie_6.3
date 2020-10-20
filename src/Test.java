@@ -6,9 +6,9 @@ public class Test {
         product[1] = new Product("Krakersy", "Solone", 12, "na chrupko");
         product[2] = new Product("Długopis", "Czarny", 8, "biurowe");
 
-        output.printer(product[0]);
-        output.printer(product[1]);
-        output.printer(product[2]);
+        output.printProductNetPrice(product[0]);
+        output.printProductNetPrice(product[1]);
+        output.printProductNetPrice(product[2]);
 
 
     }
