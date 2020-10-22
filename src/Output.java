@@ -1,8 +1,6 @@
 public class Output {
-    private PriceManagement price = new PriceManagement();
 
-    public void printProductNetPrice(Product product) {
-        double netPrice = price.calculateNetPrice(product);
+    public void printProductNetPrice(Product product, double netPrice) {
         if (netPrice == 0) {
             System.out.println("Brak takiej kategorii.");
         } else {
