@@ -8,7 +8,7 @@ public class PriceManagement {
         System.out.println("Podaj szukaną kategorię: ");
         String category = sc.nextLine();
         double sumNetPrice = 0;
-        double netPrice = 0;
+        double netPrice;
         for (int i = 0; i < product.length; i++) {
             if (product[i].getCategory().equals(category)) {
                 netPrice = calculateNetPrice(product[i]);
