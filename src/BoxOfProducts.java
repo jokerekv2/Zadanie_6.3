@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
 public class BoxOfProducts {
-    private Product[] products = new Product[3];
     private Scanner sc = new Scanner(System.in);
 
-    public void fillProductBox() {
-        for (int i = 0; i < products.length; i++) {
+    public Product[] fillProductBox() {
+        System.out.print("Podaj ilość produktów: ");
+        int sizeOfBox = sc.nextInt();
+        sc.nextLine();
+        Product[] products = new Product[sizeOfBox];
+        for (int i = 0; i < sizeOfBox; i++) {
             products[i] = setProductsInfo();
         }
-    }
-
-    public Product[] getProducts() {
         return products;
     }
 

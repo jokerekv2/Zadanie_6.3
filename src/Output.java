@@ -4,8 +4,8 @@ public class Output {
         if (netPrice == 0) {
             System.out.println("Brak takiej kategorii.");
         } else {
-            System.out.println(product.getName() + ", " + product.getDescription() + ", Cena brutto: " +
-                    product.getGrossPrice() + ", Kategoria: " + product.getCategory() + ", Cena netto: " + netPrice + "\n");
+            System.out.println("- " + product.getName() + ", " + product.getDescription() + ", Cena brutto: " +
+                    product.getGrossPrice() + ", Kategoria: " + product.getCategory() + ", Cena netto: " + netPrice);
         }
     }
 }

@@ -4,7 +4,20 @@ public class PriceManagement {
     private Scanner sc = new Scanner(System.in);
     private Output output = new Output();
 
-    public void calculateNetPrice(Product product) {
+    public void compareAndSumGrossPrice(Product[] product) {
+        System.out.println("Podaj szukaną kategorię: ");
+        String category = sc.nextLine();
+        double sumGrossPrice = 0;
+        for (int i = 0; i < product.length; i++) {
+            if (product[i].getCategory().equals(category)) {
+                calculateNetPrice(product[i]);
+                sumGrossPrice += product[i].getGrossPrice();
+            }
+        }
+        System.out.println("Łączna suma cen brutto produktów wybranej kategorii wynosi: " + sumGrossPrice);
+    }
+
+    private void calculateNetPrice(Product product) {
         double netPrice;
         switch (product.getCategory()) {
             case "owoce i warzywa":
@@ -21,20 +34,5 @@ public class PriceManagement {
         }
         output.printProductNetPrice(product, netPrice);
     }
-
-    public void calculateNetPrice(Product[] product) {
-        System.out.println("Podaj szukaną kategorię: ");
-        String category = getWantedCategory();
-        for (int i = 0; i < product.length; i++) {
-            if (product[i].getCategory().equals(category)) {
-                calculateNetPrice(product[i]);
-            }
-        }
-    }
-
-    private String getWantedCategory() {
-        return sc.nextLine();
-    }
-
 }
 
